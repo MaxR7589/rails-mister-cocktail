@@ -3,8 +3,9 @@
   <h1>Cocktails menu</h1>
 
   <% @cocktails.each do |cocktail| %>
-  <p> <%= link_to cocktail.name, cocktail_path(cocktail) %> </p>
+  <p>
+    <%= link_to cocktail.name, cocktail_path(cocktail) %>
+    <%= cl_image_tag cocktail.photo, height: 200, width: 200, crop: :fill %>
+  </p>
   <% end  %>
-
-  <%= link_to "Create a cocktail", new_cocktail_path, class: "btn btn-danger" %>
 </div>

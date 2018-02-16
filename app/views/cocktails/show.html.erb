@@ -4,7 +4,9 @@
     <li> <%= dose.ingredient.name %>||<%= dose.description %> - <%= link_to "Delete", cocktail_dose_path(@cocktail,dose),
             method: :delete,
             data: { confirm: "Are you sure?" },
-            class: "btn btn-danger" %> </li>
+            class: "btn btn-danger" %>
+      <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+      </li>
     <% end %>
   </ul>
 
